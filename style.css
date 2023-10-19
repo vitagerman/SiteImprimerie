@@ -126,10 +126,66 @@ nav ul li a:hover::after{
 }
 
 .container_animations{
-    margin-left: auto; 
-    margin-right: auto;
-    padding-left: 75px;
-    padding-right: 75px; 
+    position: relative;
+    border-top: #000;
+    border-bottom: #000;
+    border-style: solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%; 
+}
+
+.container_animations img{
+    transition: transform 0.5s ease;
+    max-width: 100%;
+    height: auto;
+    width: 606px;
+    height: 313px;
+}
+
+.slide-left {
+    transform: translateX(-100%);
+}
+
+@media screen and (max-width: 1410px){
+    .slide-left{
+        transform: translateX(0.1%);
+    }
+}
+
+
+.slide-right {
+    transform: translateX(100%);
+}
+
+@media screen and (max-width: 1410px){
+    .slide-right{
+        transform: translateX(0.1%);
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement */
+    font-size: 24px;
+    cursor: pointer; /* Indique que c'est cliquable */
+    z-index: 10; /* S'assurer qu'ils apparaissent au-dessus de l'image */
+    color: #fff; /* Assurez-vous que la couleur est visible sur l'image */
+    background-color: rgba(0, 0, 0, 0.4); /* Fond légèrement transparent pour la visibilité */
+    padding: 8px 12px;
+    border-radius: 50%; /* Donne une forme circulaire aux flèches */
+}
+
+#left-arrow {
+    left: 10px; /* Un petit espace par rapport à la bordure gauche */
+}
+
+#right-arrow {
+    right: 10px; /* Un petit espace par rapport à la bordure droite */
 }
 
 .container_carte{
@@ -174,8 +230,8 @@ h1{
 
 
 h2{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     color: var(--color-text);
     font-family: Abhaya Libre ExtraBold;
     font-size: 70px;
@@ -440,6 +496,7 @@ nav{
 }
 
 header{
+    background-color: rgb(14, 13, 13);
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -540,6 +597,7 @@ footer nav{
 }
 
 .horraire_comment_s_y_rendre{
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -559,6 +617,7 @@ footer nav{
 .s_y_rendre{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 90px;
     background-color: var(--color-button);
     height: 500px;
@@ -576,7 +635,7 @@ footer nav{
 
 .colonne_picto img{
     margin-right: 5%;
-    width: 10%;
+    width: 20%;
 }
 
 .heure{
