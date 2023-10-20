@@ -1,67 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">                                            <!--definit le language en anglais-->
+<html lang="fr">
+
+                                    <!--Métadonnées et liens-->
 <head>
-    <meta charset="UTF-8">                                  <!--affiche les accents-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Musée de l'Imprimerie de Nantes</title> 
-    <link rel="stylesheet" href="reset.css">                            <!--titre de la page-->
-    <link rel="stylesheet" href="style.css">                <!--lie à la page css-->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts.js" defer></script>                <!--lie à la page JS-->
+    <meta charset="UTF-8">                                                      <!--affiche les accents-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!--pour afficher sur smartphone (responsive)-->
+    <title>Le Musée de l'Imprimerie de Nantes</title>                           <!--titre de la page WEB-->
+    <!--lie aux pages CSS internes-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!--lie aux pages CSS externes-->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <script src="scripts.js" defer></script>                                    <!--lie à la page JS-->
 </head>
 
+                                    <!--Corps de page-->
 <body>  
-                                                        <!--MENU-->
+                                    <!--En-Tête-->
     <header>
-        <img id="logo" src="images/logo_MAI_blanc.png" alt="Logo du Musée Atelier de l'Imprimerie de Nantes"><!--image logo-->
-        <nav>
-            <ul class="link"><!--liste non ordonnée-->
-                <li><!--definit un element de la liste-->
-                    <a href="index.html">Accueil</a><!--lien vers la page d'accueil-->
+        <img id="logo" src="images/logo_MAI_blanc.png" alt="Logo du Musée Atelier de l'Imprimerie de Nantes">   <!--image logo-->
+        <nav>                                                                                                   <!--menu-->
+            <ul class="link">                                                                                   <!--liste non ordonnée-->
+                <li>                                                                                            <!--définit un élément de la liste-->
+                    <a href="index.html">Accueil</a>                                                            <!--lien vers la page d'accueil-->
                 </li>
                 <li>
-                    <a href="content.html">Nous Découvrir</a><!--lien vers la page contenu-->
+                    <a href="content.html">Nous Découvrir</a>                                                   <!--lien vers la page contenu-->
                 </li>
                 <li>
-                    <a href="en_ce_moment.html">En ce Moment</a>
+                    <a href="en_ce_moment.html">En ce Moment</a>                                                <!--Faux lien-->
                 </li>
                 
-                <div class="header-droite"><!--bouton billeterie-->
-                    <li class="bouton_billeterie">
-                        <a href="billeterie.html">Billeterie</a>
-                    </li>
-                    <li id="etatOuverture">
-                        <img class="imageCercleVert" src="images/cercle_vert_en_ligne.png" alt="Cercle en Vert pour indiquer si le musée est ouvert ou non">
+                <div>                                                                                           <!--Bouton billeterie-->
+                    <button class="button_billeterie" href="lien billeterie">                                   <!--Faux lien-->
+                        <div class="light_red">                                                                 <!--Met le bloc en rouge clair-->
+                        <p class="texS">Billeterie</p>
+                        </div>
+                    </button>
+                    
+                    <li id="etatOuverture">                                                                     <!--horaires-->
+                        <img src="images/cercle_vert_en_ligne.png" alt="Cercle Vert indiquant si le musée est ouvert ou non">
                     </li>
                 </div>
+
             </ul>
         </nav>
     </header>
 
-                                                        <!--TITRE ET SLIDER-->
+                                    <!--Contenu principal de la page-->
     <main>
-        <section class="presentation">
-            <h1>Voyage à travers l'Histoire de l'Impression !</h1>
-        </section>
-        <section class="presentation"> 
+                                    <!--Titre et Slider-->
+        <h1>Voyage à travers l'Histoire de l'Impression !</h1>          <!--Grand titre (unique à la page)-->
             <div class="image-slideshow">
-                <div class="image fade">
-                <img class="image-car" src="images/buste_gutemberg.jpg" alt="Mountain Top">
+
+                <div class="image fade">                                <!--class image et fade-->
+                    <img class="image-car" src="images/buste_gutemberg.jpg" alt="Buste de Gutenberg">
                 </div>
                 <div class="image fade">
-                <img class="image-car" src="images/plaque_de _plombs.jpg" alt="Palm Trees">
+                    <img class="image-car" src="images/plaque_de _plombs.jpg" alt="Plaques de plombs">
                 </div>
             </div>
-        </section>
 
-                                                            <!--INFOS SUR LE MUSEE-->
+                <button class="button_billeterie_slider" href="lien billeterie">                          <!--Faux lien-->
+                    <div class="square_info">
+                        <img class="image_info" src="images/icone_info.png" alt="Billeterie" /> <!--C'EST L'IMAGE BILLET QU'IL FAUT-->
+                    </div>
+                    <div>
+                        <p class="texS Space_savoir_plus">Billeterie</p>
+                    </div>
+                </button>
+
+                                    <!--Infos sur le Musée-->
         <section class="container_info">
             <h2>
-                Informations sur le musée
+                Informations sur le musée           <!--Titre h2-->
             </h2>
 
-            <p class="texSpace texM">
+            <p class="texM">                        <!--Texte alternant entre regular et gras-->
             Tout naturellement, l’idée de
             <b class="texMbold">préserver ce qui fut cinq cents ans de communication de la pensée,</b>
             germa dans l'esprit de deux hommes,
@@ -99,19 +115,20 @@
             </div>
         </section>
 
+                                    <!--Expositions-->
         <section class="container_expo">
             <h2>
                 Les Expositions
             </h2>
             <img class="grimoire" src="images/exposition_grimoires_celestes.png" alt="Image expositions">
 
-                                <!--BOUTON-->
-            <button class="button_savoir_plus" href="lien vers en savoir plus">
-                <div class="red1">
-                <img class="image_info" src="images/icone_info.png" alt="En savoir plus" />
+                                    <!--Bouton-->
+            <button class="button_savoir_plus" href="lien en savoir plus">                          <!--Faux lien-->
+                <div class="square_info">
+                    <img class="image_info" src="images/icone_info.png" alt="En savoir plus" />
                 </div>
-                <div class="red">
-                <p class="texS">En savoir plus</p>
+                <div>
+                    <p class="texS Space_savoir_plus">En savoir plus</p>
                 </div>
             </button>
             <h3>
@@ -119,37 +136,40 @@
             </h3>
         </section>
 
+                                    <!--A la Une Slider-->
             <section class="container_news">
                 <h2>
                     À la une
                 </h2>
                 <div class="slideshow-container">
                     <div class="slide fade">
-                    <img src="images/devanture-musee.jpg" alt="Image 1">
-                    <div class="text"><h3>Cure de rajeunissement</h3></div>
+                        <img src="images/devanture-musee.jpg" alt="Image 1">
+                        <div class="text"><h3>Cure de rajeunissement</h3></div>
                     </div>
                     <div class="slide fade">
-                      <img src="images/vue_du_musee.jpg" alt="Image 3">
-                      <div class="text"><h3>Vue du musée</h3></div>
+                        <img src="images/vue_du_musee.jpg" alt="Image 3">
+                        <div class="text"><h3>Vue du musée</h3></div>
                     </div>
                     <div class="slide fade">
                         <img src="images/le_tigre_et_le_president.png" alt="Image 4">
                         <div class="text"><h3>Le Tigre et le Président un nouveau film au musée…</h3></div>
-                      </div>
-                      <div class="slide fade">
-                        <img src="images/carte_de_voeux.jpg" alt="Image 5">
-                        <div class="text"><h3>Creation de carte de voeux </h3></div>
-                      </div>
+                    </div>
+                        <div class="slide fade">
+                            <img src="images/carte_de_voeux.jpg" alt="Image 5">
+                            <div class="text"><h3>Creation de carte de voeux </h3></div>
+                        </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                  </div>
 
-                </div>
-                <a href="En savoir plus">
-                    <img class="image_info" src="images/" alt=" En savoir plus">
-                </a>
-                <article>
-                </article>
+                    <button class="button_savoir_plus_ALaUne" href="lien en savoir plus">                          <!--Faux lien-->
+                        <div class="square_info">
+                            <img class="image_info" src="images/icone_info.png" alt="En savoir plus" />
+                        </div>
+                        <div>
+                            <p class="texS Space_savoir_plus">En savoir plus</p>
+                        </div>
+                    </button>
+                </div>                                                                    <!--JE ME SUIS ARRETE ICI-->
             </section>
             <div class="horraire_comment_s_y_rendre">
                 <div>
