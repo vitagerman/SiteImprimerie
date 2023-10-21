@@ -24,13 +24,12 @@
 }
 
 .button_billeterie_slider{
-    display: flex;
-    position: absolute;
-    top: 900px;                     /*ya moyen de faire mieux*/
-    left: 20px;
+    display: flex;         /* Définissez le bouton comme un conteneur flex */
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* Positionnez le bouton par rapport au diaporama */
+    bottom: 0;
     background-color: var(--color-light-red);
-    align-items: center; /* Aligner le contenu verticalement au centre */
-    
 }
 
 .light_red{
@@ -920,14 +919,22 @@ footer nav{
   /*Retrouver nous cube rouge*/
 
   .retrouvez_nous{
+    margin-top: 25px;
+    gap: 123px;
     display: flex;
     padding: 90px; 
     margin-left: 200px;
     margin-right: 200px;
-
-
     background-color: var(--color-light-red);
   }
+
+@media (max-width: 1000px){
+    .retrouvez_nous{
+        flex-wrap: wrap;
+    }
+}
+
+
   .Retrouvez{
     text-align: center;
   }
@@ -952,6 +959,14 @@ footer nav{
 
 }
 
+@media (max-width: 1000px){
+    .colonne_gauche{
+        align-items: center;
+    }
+}
+
+        
+
 .colonne_droite{
     display: flex;
     gap: 32px;
@@ -959,12 +974,6 @@ footer nav{
 
 }
 
-.retrouvez_nous{
-    margin-top: 25px;
-    display: flex;
-    gap: 382px;
-
-}
 
 .colonne_picto2{
     display: flex;
